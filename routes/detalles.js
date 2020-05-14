@@ -1,9 +1,9 @@
 let express = require('express');
 let router = express.Router();
 
+const controller = require('../controllers/detallesController');
+
 /* localhost:3000/detalles */
-router.get('/detalles', function(req, res) {
-  res.send("Página del detalle de la pelicula");
-});
+router.get('/detalles', controller.detalles);
 
 module.exports = router;
