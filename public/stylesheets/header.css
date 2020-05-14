@@ -22,12 +22,12 @@ header nav ul li.logo img {
 }
 header nav ul.ul-menu {
 	float: right;
-	width: 70%;
+	width: 80%;
 	margin-top: 25px;
 }
 header nav ul.ul-menu li.menu-item {
 	float: left;
-  width: 13%;
+  width: 10%;
 	margin-right: 2%;
   text-align: center;
 }

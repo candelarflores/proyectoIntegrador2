@@ -1,0 +1,12 @@
+header{
+  margin-bottom: 100px
+}
+
+div.container{
+  text-align: center;
+}
+div.container input.form-control{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
