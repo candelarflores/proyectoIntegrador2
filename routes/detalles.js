@@ -4,6 +4,6 @@ let router = express.Router();
 const controller = require('../controllers/detallesController');
 
 /* localhost:3000/detalles */
-router.get('/detalles', controller.detalles);
+router.get('/', controller.detalles);
 
 module.exports = router;
