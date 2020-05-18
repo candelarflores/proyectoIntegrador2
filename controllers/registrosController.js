@@ -1,3 +1,5 @@
+//let db = require("../database/models")
+
 module.exports = {
 
     registros: function(req, res){
@@ -5,14 +7,15 @@ module.exports = {
        res.render('registro')
     },
 
-    create: function(req, res){
-       let usuario = {
-          nombre: req.body.username,
-          email: req.body.email,
-          contraseña: req.body.pswd,
-          birthdate: req.body.birthdate,
-       }
-       res.redirect("/login");
+    guardar: function(req, res){
+       db.Usuarios.create({
+         name: req.body.username,
+         email: req.body.email,
+         password: req.body.pswd,
+         born_date: req.body.birthdate,
+
+       }),
+       res.redirect("/login"); 
     },
    
    }

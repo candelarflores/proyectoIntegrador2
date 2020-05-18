@@ -5,7 +5,7 @@ const controller = require('../controllers/registrosController')
 /* localhost:3000/registros */
 router.get('/', controller.registros);
 
-router.post("/", controller.create);
+router.post("/", controller.guardar);
 
 
 module.exports = router;
