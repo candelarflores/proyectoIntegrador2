@@ -10,9 +10,19 @@ module.exports = {
         res.render('resultadoBusqueda')
     },
 
+    busquedaUsuarios: function(req, res){
+
+        res.render("busquedaUsuarios")
+    },
+
     resultadosUsuarios: function(req, res){
 
-        res.render("busquedaUsuario")
+        res.render("resultadosUsuarios")
+    },
+
+    detalleUsuarios: function(req, res){
+
+        res.render("detalleUsuarios")
     },
   
 
