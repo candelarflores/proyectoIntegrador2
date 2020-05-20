@@ -9,6 +9,11 @@ module.exports = {
 
         res.render('resultadoBusqueda')
     },
+
+    resultadosUsuarios: function(req, res){
+
+        res.render("busquedaUsuario")
+    },
   
 
 }

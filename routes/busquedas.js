@@ -8,4 +8,7 @@ router.get('/', controller.busqueda);
 /* localhost:3000/buscar/resultados */
 router.get('/resultados', controller.resultados);
 
+/* localhost:3000/buscar/resultados_usuarios */
+router.get('/resultados_usuarios', controller.resultadosUsuarios);
+
 module.exports = router;
