@@ -12,8 +12,12 @@ var usersRouter = require('./routes/users');
 let busquedasRouter = require("./routes/busquedas");
 let generosRouter = require("./routes/generos");
 let detallesRouter = require("./routes/detalles");
+<<<<<<< Updated upstream
 let registroRouter = require('./routes/registros');
 let loginRouter = require('./routes/login')
+=======
+let registroRouter = require('./routes/registro');
+>>>>>>> Stashed changes
 
 
 var app = express();
@@ -34,8 +38,12 @@ app.use('/users', usersRouter);
 app.use("/buscar", busquedasRouter);
 app.use("/generos", generosRouter);
 app.use("/detalles", detallesRouter);
+<<<<<<< Updated upstream
 app.use('/registros', registroRouter);
 app.use('/login', loginRouter)
+=======
+app.use('/registro', registroRouter);
+>>>>>>> Stashed changes
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
