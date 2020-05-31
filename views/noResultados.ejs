@@ -28,16 +28,19 @@
             </ul>
         </nav>
     </header>
-    <main>
-      <h1 align= "center">Resultados de la búsqueda</h1>   
-          <ul align= "center">
-            <% for( let i = 0; i < listadoUsuarios.lenght; i++ ) { %>
-            <li>
-              <%= listadoUsuarios[i].username %> 
-              <a href="">ver detalle</a>
-            </li>
-            <% } %>
-          </ul>
+    <main>  
+      
+      <div align= "center" > 
+          <br>
+          <br>
+         <strong>No se han encontrado resultados acordes con los criterios de busqueda, intenta lo siguiente:</strong>
+         <p>Completa uno de los campos.</p>   
+         <p>¿Deseas realizar otra búsqueda? Haz click <a href="/buscar/busqueda_usuarios">aquí</a>.</p>  
+      </div>
+
+      
+      
+
     </main>
 
   </body>

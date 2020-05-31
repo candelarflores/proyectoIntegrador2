@@ -42,15 +42,14 @@
     <div class="container">
         <h3 align ="center">Elige el método de búsqueda que mas te guste.</h3>
         <hr>
-        <form action="/buscar/busqueda_usuarios/resultadosUsuarios:id" method="get">
-            <input type="hidden" value="e59c94a503ea78e9502aa8e308f21eb5" name="key">
+        <form action="/buscar/busqueda_usuarios/resultadosUsuarios" method="POST">
             <div class="form-group">
                 <label for="exampleFormControlInput1">Por nombre de usuario</label>
-                <input type="text" name="query" class="form-control" id="exampleFormControlInput1" placeholder="proyectoDH2020" autofocus>
+                <input type="text" name="query" class="form-control" id="exampleFormControlInput1" placeholder="proyectoDH2020" autofocus >
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Por email</label>
-                <input type="email" name="query" class="form-control" id="exampleFormControlInput1" placeholder="proyectoDH@gmail.com" autofocus>
+                <input type="email" name="query" class="form-control" id="exampleFormControlInput1" placeholder="proyectoDH@gmail.com" autofocus >
                 <br>
             </div>
             <button type="search" class="btn btn-primary" style="width: 100%;">Buscar</button>

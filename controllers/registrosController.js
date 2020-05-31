@@ -1,4 +1,6 @@
 let db = require("../database/models")
+const bcrypt = require("bcryptjs")
+
 
 module.exports = {
 
@@ -11,10 +13,10 @@ module.exports = {
        db.Usuarios.create({
          username: req.body.username,
          email: req.body.email,
-         pass: req.body.pswd,
+         pass: bcrypt.hashSync(req.body.pswd, 10),
          dateofbirth: req.body.birthdate,
 
-       }),
+    }),
        res.redirect("/login"); 
     },
    
