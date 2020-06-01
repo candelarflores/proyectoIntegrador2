@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Registro</title>
     <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/uikit.min.css">
     <link rel="stylesheet" href="/stylesheets/registro.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -37,28 +38,45 @@
         </nav>
     </header>
     <div class="container">
-  <h2>Regístrate</h2>
-  <br>
-  <form action="/registros" method="POST">
-    <div class="form-group">
-      <input type="username" class="form-control" id="username" placeholder="Nombre de usuario" name="username" required>
+      <h2>Regístrate</h2>
+      <br>
+      <form action="/registros" method="POST">
+        <div class="form-group">
+          <input type="username" class="form-control" id="username" placeholder="Nombre de usuario" name="username" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pswd" required>
+        </div>
+        <div class="form-group">
+          <label for="birthdate">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="birthdate" placeholder="Fecha de nacimiento" name="birthdate" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+        <br>
+        <br>
+        <p>¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a> </p>
+      </form>
     </div>
-    <div class="form-group">
-      <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
-    </div>
-    <div class="form-group">
-      <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pswd" required>
-    </div>
-    <div class="form-group">
-      <label for="birthdate">Fecha de nacimiento</label>
-      <input type="date" class="form-control" id="birthdate" placeholder="Fecha de nacimiento" name="birthdate" required>
-    </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
-    <br>
-    <br>
-    <p>¿Ya tienes una cuenta? <a href="/login">Iniciar sesión</a> </p>
-  </form>
-</div>
 
+    <!-- footer -->
+  <footer>
+
+    <div class="dh"><img src="/images/logo-dh-blanco.png" alt="dh"></div>
+    
+    <div class="tmdb"><img src="/images/logotmdb.jpg" alt="tmdb"></div>
+
+    <article class="">
+      <strong style="color: rgb(203, 30, 64);">INTEGRANTES</strong>
+      <ul>
+        <li>Joaquín Gomez Rebelo</li>
+        <li>Eric Ryosho Shimizukawa</li>
+        <li>Candela Rocío Flores</li>
+      </ul>
+    </article>
+
+  </footer>
   </body>
 </html>
