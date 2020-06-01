@@ -5,6 +5,6 @@ const controller = require('../controllers/loginController')
 
 router.get('/', controller.login)
 /* GET home page. */
-router.post('/', controller.entrar)
+router.post('/', controller.validar)
 
 module.exports = router;

@@ -6,13 +6,12 @@
     <title>Login</title>
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/uikit.min.css">
-    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/reseñas.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <script src="/javascripts/login.js" ></script>
+    <title>Nerfli</title>
 </head>
 <body>
     <header>
@@ -35,22 +34,21 @@
             </ul>
         </nav>
     </header>
+    <h2>Reseñas de </h2> 
+    
     <div class="container">
-        <h2>Ingresa a reseñas</h2>
-        <br>
-        <form action="/login" method="POST">
-          <div class="form-group">
-            <input type="email" class="form-control" id="username" placeholder="Email" name="email">
-          </div>
-          <div class="form-group">
-            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pswd">
-          </div>
-          <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-          <br>
-          <br>
-          <p>¿No tienes una cuenta? <a href="/registros">Regístrate aquí</a> </p>
-          
-        </form>
+
+        
+        <ul><% for (let i = 0; i < reseñas.length; i++ ){  %>   
+            <li>
+    
+                <%= reseñas[i].content %>  
+            </li>
+        
+        
+            <% } %>
+    
+        </ul> 
       </div>
     
 </body>

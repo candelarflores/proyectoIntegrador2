@@ -13,7 +13,8 @@ let busquedasRouter = require("./routes/busquedas");
 let generosRouter = require("./routes/generos");
 let detallesRouter = require("./routes/detalles");
 let registroRouter = require('./routes/registros');
-let loginRouter = require('./routes/login')
+let loginRouter = require('./routes/login');
+let reseñasRouter = require('./routes/reseñas');
 
 
 var app = express();
@@ -35,7 +36,8 @@ app.use("/buscar", busquedasRouter);
 app.use("/generos", generosRouter);
 app.use("/detalles", detallesRouter);
 app.use('/registros', registroRouter);
-app.use('/login', loginRouter)
+app.use('/login', loginRouter);
+app.use('/resenias', reseñasRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
