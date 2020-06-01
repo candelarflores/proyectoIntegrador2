@@ -34,21 +34,26 @@
             </ul>
         </nav>
     </header>
-    <h2>Reseñas de </h2> 
     
     <div class="container">
-
+        <% if (reseñas.length == 0){ %>
+            <h1>No tenes reseñas</h1>
+            <%  } else { %>
+             <h1>reseñas de <%= reseñas[0].Usuarios.username%></h1>
+            
         
-        <ul><% for (let i = 0; i < reseñas.length; i++ ){  %>   
-            <li>
-    
-                <%= reseñas[i].content %>  
-            </li>
+        <% for (let i = 0; i < reseñas.length; i++ ){  %>   
+            
+            <div>Puntaje: <%= reseñas[i].rating %></div>
+              <h4><%= reseñas[i].content %> </h4>   
+              
+            
         
         
             <% } %>
+            <% } %>
     
-        </ul> 
+        
       </div>
     
 </body>
