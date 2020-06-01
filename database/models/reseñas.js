@@ -1,18 +1,37 @@
 module.exports = (sequelize, DataTypes) => {
-    const reseña = sequelize.define(
-        "Reseñas",
-        {
-           
-            content: DataTypes.STRING,
-            user_id: DataTypes.INTEGER,
-            movie_id: DataTypes.INTEGER,
-          
+    
+    let alias = "Reseñas";
+    let cols = {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoincrement: true,
         },
-        {   tableName: "reviews",
+        content: {
+            type: DataTypes.STRING,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+        },
+        movie_id: {
+            type: DataTypes.INTEGER,
+        },
+        rating: {
+            type: DataTypes.INTEGER,
+        },
+    };
+    let config = {
+        tableName: "reviews",
+        timestamps: false,
+    };
+    const Reseñas = sequelize.define(alias,cols, config);
+    
 
-            timestamps: false,
-        }
-    );
-
-    return reseña;
-      }
+    Reseñas.associate = function(models){
+        Reseñas.belongsTo(models.Usuarios, {
+            as: 'Usuarios',
+            foreignKey: 'user_id'
+        })
+    }
+    return Reseñas
+}

@@ -16,10 +16,10 @@ module.exports = {
         moduloLogin.validar(req.body.email, req.body.pswd)
         .then(resultado=> {
 
-            if(resultado) {res.render('reseñas')
+            if(resultado == undefined) {res.redirect('/login')
         }else{
 
-            res.render('login')
+            res.redirect('/resenias/' + resultado.id)
         }
         })
  }

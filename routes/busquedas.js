@@ -15,6 +15,6 @@ router.get('/busqueda_usuarios', controller.busquedaUsuarios);
 router.post('/busqueda_usuarios/resultadosUsuarios', controller.resultadosUsuarios);
 
 /* localhost:3000/buscar/busqueda_usuarios/resultadosUsuarios/detalle */
-router.get('/busqueda_usuarios/resultadosUsuarios/detalle', controller.detalleUsuarios);
+router.get('/busqueda_usuarios/resultadosUsuarios/detalle/:id', controller.detalleUsuarios);
 
 module.exports = router;
