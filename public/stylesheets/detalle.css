@@ -22,6 +22,83 @@ main{
   max-height: 430px;
   width: 100%;
 }
-.detalle-form {
-  background-color: blue;
+.rating {
+  position: relative;
+  top: 257%;
+  left: 8%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  display: flex;
+}
+.rating input {
+  display: none;
+}
+.rating label {
+display: block;
+cursor: pointer;
+width: 50px;
+}
+.rating label:before {
+  content: "\f005";
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 50px;
+  color: #2c2b2b;
+
+}
+.rating label:after {
+  content: "\f005";
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 50px;
+  color: rgba(112, 19, 138, 0.86);
+  top: 0;
+  opacity: 0;
+  transition: .5s;
+  text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after {
+  opacity: 1;
+}
+.allForm {
+  text-align: center;
+ 
+}
+.buttonForm {
+  background-image: linear-gradient(rgba(112, 19, 138, 0.86), #c5454d);
+  text-decoration-color: white;
+  border-color: black; 
+  border-radius: 40px;
+  width: 8%;
+  height: 30px;
+  font-size: 18px;
+}
+
+.form-group input {
+  border-style: none;
+  outline: none;
+  color: black;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif ;
+  height: 37px;
+  width: 400px;
+  font-size: 17px;
+  border-radius: 2%;
+  border-left: 0px
+  ;
+  
+}
+.form-control textarea {
+  border-style: none;
+  outline: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif ;
+  color: currentColor;
+  font-size: 17px;
+  width: 40%;
+  text-align: center;
+  border-radius: 2%;
 }
