@@ -22,3 +22,6 @@ main{
   max-height: 430px;
   width: 100%;
 }
+.detalle-form {
+  background-color: blue;
+}
