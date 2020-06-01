@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/stylesheets/detalle.css">
     <link rel="stylesheet" href="/stylesheets/uikit.min.css">
     <link rel="stylesheet" href="/stylesheets/registro.css">
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="/javascripts/uikit-icons.min.js" ></script>
     <script src="/javascripts/uikit.min.js" ></script>
     <script src="/javascripts/detalle.js" ></script>
@@ -72,27 +72,36 @@
             </div>
           </div>
         </div>
-        <form action="">
+        <form class="allForm" action="/detalles/<%= serieId %>" method="POST">
+          <div>
+           <input type="hidden" name="serieId" value="<%= serieId %>">
+          </div>
           <div class="form-group">
-            <input class="form-control" type="email" placeholder="Email">
+            <input class="form-control" id="email" type="email" name="email" placeholder="Email">
           </div> 
           <br>
-          <div class="form-group"><input class="form-control" type="password" placeholder="Contraseña"></div>
+          <div class="form-group"><input class="form-control" id="pwd" type="password" name="pwd" placeholder="Contraseña"></div>
           <br>
-          <div class="form-control"><textarea name="" id="" cols="30" rows="10" placeholder="Escriba aquí su reseña"></textarea></div>
+          <div class="form-control"><textarea name="text" id="text" cols="30" rows="10" placeholder="Escriba aquí su reseña"></textarea></div>
           
           <br>
-          <select name="" id="">
-            <option value selected disabled>Puntaje</option>
-            <option value="puntaje_0">0</option>
-            <option value="puntaje_1">1</option>
-            <option value="puntaje_2">2</option>
-            <option value="puntaje_3">3</option>
-            <option value="puntaje_4">4</option>
-            <option value="puntaje_5">5</option>
-          </select>
           <br>
-          <button type="submit">Enviar</button>
+          
+          <div class="rating">
+            <input type="radio" name="star" id="star1"><label for="star1">
+            </label>
+            <input type="radio" name="star" id="star2"><label for="star2">
+            </label>
+            <input type="radio" name="star" id="star3"><label for="star3">
+            </label>
+            <input type="radio" name="star" id="star4"><label for="star4">
+            </label>
+            <input type="radio" name="star" id="star5"><label for="star5">
+            </label>
+          </div>
+          
+          
+          <button class="buttonForm" type="submit">Enviar</button>
         </form>
 
       </div>
