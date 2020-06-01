@@ -21,9 +21,9 @@ module.exports = {
 
     resultadosUsuarios: function(req, res){
 
-        let nombreUsuario = req.body.query[0];
+         let nombreUsuario = req.body.query[0];
 
-        let correo = req.body.query[1]
+         let correo = req.body.query[1]
 
         if(nombreUsuario == "" && correo == ""){
             return res.render("noResultados")
@@ -38,8 +38,8 @@ module.exports = {
                 })
             .then(function(resultados){
                 if(resultados != 0){
-                    return res.send(resultados)
-                    //return res.render("resultadosUsuarios", {listadoUsuarios:resultados})
+                    //return res.send(resultados)
+                    return res.render("resultadosUsuarios", {listadoUsuarios:resultados})
                     
                 } else {
                     res.render("noResultados")
@@ -60,8 +60,8 @@ module.exports = {
             })
             .then(function(resultados){
                 if(resultados != 0){
-                    res.send(resultados)
-                    //res.render("resultadosUsuarios", {resultados:resultados})
+                    //res.send(resultados)
+                    res.render("resultadosUsuarios", {listadoUsuarios:resultados})
                 } else {
                     res.render("noResultados")
                 }
@@ -84,8 +84,8 @@ module.exports = {
             })
             .then(function(resultados){
                 if(resultados != 0){
-                    res.send(resultados)
-                    //res.render("resultadosUsuarios", {resultados:resultados})
+                    //res.send(resultados)
+                    res.render("resultadosUsuarios", {listadoUsuarios:resultados})
                 } else {
                     res.render("noResultados")
                 }
@@ -98,7 +98,18 @@ module.exports = {
 
     detalleUsuarios: function(req, res){
 
-        res.render("detalleUsuarios")
+        db.Usuarios
+			.findByPk(
+				req.params.id
+			)
+			.then(resultados => {
+				return res.render('detalleUsuarios', {
+					detalleUsuario: resultados,
+				});
+			})
+			.catch(error => {
+				return res.send(error)
+			});
     },
   
 

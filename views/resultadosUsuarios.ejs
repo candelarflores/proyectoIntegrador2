@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="/stylesheets/uikit.min.css">
 
   </head>
+
   <body>
+
     <header>
         <nav>
             <ul class="logo-list">
@@ -28,17 +30,21 @@
             </ul>
         </nav>
     </header>
+
     <main>
+
       <h1 align= "center">Resultados de la búsqueda</h1>   
           <ul align= "center">
-            <% for( let i = 0; i < listadoUsuarios.lenght; i++ ) { %>
+            <% for( let i = 0; i < listadoUsuarios.length; i++ ) { %>
             <li>
               <%= listadoUsuarios[i].username %> 
-              <a href="">ver detalle</a>
+              <a href="/buscar/busqueda_usuarios/resultadosUsuarios/detalle/<%= listadoUsuarios[i].id %>">ver detalle</a>
             </li>
             <% } %>
-          </ul>
+          </ul>  
+
     </main>
 
   </body>
+  
 </html>
