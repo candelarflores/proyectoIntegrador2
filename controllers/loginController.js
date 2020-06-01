@@ -1,3 +1,9 @@
+let DB = require("../database/models");
+let moduloLogin = require('../modulo-login');
+
+
+
+
 module.exports = {
  
     login: function(req, res){
@@ -5,12 +11,17 @@ module.exports = {
         res.render('login')
     },
 
-    entrar: function(req, res){
-        db.usuario
+    validar: function(req, res){
 
+        moduloLogin.validar(req.body.email, req.body.pswd)
+        .then(resultado=> {
 
-        res.redirect('/')
-    }
+            if(resultado) {res.render('reseñas')
+        }else{
 
+            res.render('login')
+        }
+        })
+ }
+  }
 
-}
