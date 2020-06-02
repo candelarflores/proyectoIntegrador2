@@ -16,11 +16,11 @@ create: function(req, res) {
            movie_id: req.body.serieId,
            user_id: usuario.id,
            content: req.body.text,
-           rating: req.body.rating
+           rating: req.body.star
         })
         .then(function(resultado) {
            res.redirect("/detalles?serieId=" + resultado.movie_id)
-           //res.send("Se creo la reseñaaaa")
+           //res.send(req.body)
         })
      } else {
         res.redirect("/registros")
