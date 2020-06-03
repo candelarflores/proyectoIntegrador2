@@ -19,10 +19,16 @@ module.exports = (sequelize, DataTypes) => {
         rating: {
             type: DataTypes.INTEGER,
         },
+        updatedAt: {
+            type: DataTypes.DATE,
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+        }
     };
     let config = {
         tableName: "reviews",
-        timestamps: false,
+        timestamps: true,
     };
     const Reseñas = sequelize.define(alias,cols, config);
     
