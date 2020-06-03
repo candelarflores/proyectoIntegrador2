@@ -74,7 +74,8 @@
           </div>
         </div>
 
-
+        <!-- Form reseñas -->
+        <h3 style="color: aliceblue; text-align: center; margin-bottom: 3%;">Añade una reseña pública.</h3>
         <form class="allForm" action="/detalles/<%= serieId %>" method="POST">
           <div>
            <input type="hidden" name="serieId" value="<%= serieId %>">
@@ -111,9 +112,27 @@
 
       </div>
 
-    </main>
 
-    <div style="height: 120px;"></div>
+      <!-- Reseñas -->
+      <div class="reseña">
+        <h2 style="color: aliceblue; font-weight: bold;">Comentarios</h1>   
+        <ul>
+            <% for( let i = 0; i < resultados.length; i++ ) { %>
+              <li>
+                <div><img src="/images/logoUser.png" alt=""> </div>
+                <article>
+                  <h4 style="color: aliceblue;"><%= resultados[i].Usuarios.username %></h6>
+                  <p><%= resultados[i].content %> </p>
+                  <p>Puntaje: <%= resultados[i].rating %> </p>
+                </article>
+              </li>
+          <% } %>  
+        </ul>  
+      </div>
+
+    <div style="height: 200px;"></div>
+
+    </main>
     
     <!-- footer -->
   <footer>

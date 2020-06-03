@@ -1,11 +1,22 @@
 let db = require("../database/models");
 const moduloLogin = require("../modulo-login");
+const OP = db.Sequelize.Op;
 module.exports = {
 
  detalles: function(req, res){
-
-   res.render('detalle', {
-      serieId: req.query.serieId
+   db.Reseñas.findAll({
+      where: [
+              {movie_id: {
+                  [OP.like]: "%" + req.query.serieId + "%"}}
+      ],
+      include: ['Usuarios']
+      })
+   .then(function(resultados){
+      res.render("detalle", {
+         serieId: req.query.serieId,
+         resultados: resultados
+      }) 
+      //res.send(resultados)
    })
 },
 create: function(req, res) {
