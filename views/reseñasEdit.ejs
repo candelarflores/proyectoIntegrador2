@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/reseñasEdit.css">
+    <link rel="stylesheet" href="/stylesheets/uikit.min.css">
+    <link rel="stylesheet" href="/stylesheets/registro.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="/javascripts/uikit-icons.min.js" ></script>
+    <script src="/javascripts/uikit.min.js" ></script>
+    <script src="/javascripts/reseniasEdit.js" ></script>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="logo-list">
+                <li class="logo"> <img src="/images/dh.png" alt=""> </li>
+            </ul>
+            <ul class="ul-menu">
+                <li class="menu-item home"><a class="color-violet" href="/">Inicio</a></li>
+                <li class="menu-item"><a class="color-violet" href="/generos">Géneros</a></li>
+                <li class="menu-item"><a class="color-violet" href='/buscar'>Buscador</a></li>
+                <li class="menu-item search">
+                    <form class="" action="/buscar/resultados" method="GET">
+                        <input class="input-search" type="text" name="query" value="">
+                        <button class="btn-search" type="submit">Buscar</button>
+                    </form>
+                </li>
+                <li class="menu-item"><a class="color-violet" href="/registros">Regístrate</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Edita tu reseña</h2>
+        <br>
+        <form class="allForm" action="/resenias/editE" method="POST">
+            <div>
+             <input type="hidden" name="serieId" value="<%=id%>">
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="email" type="email" name="email" placeholder="Email">
+            </div> 
+            <br>
+            <div class="form-group">
+              <input class="form-control" id="pwd" type="password" name="pswd" placeholder="Contraseña">
+            </div>
+            <br>
+            <div class="form-control">
+              <textarea class='comentario' name="text" id="text" cols="30" rows="10" placeholder=""></textarea>
+            </div>
+            <br>
+            <br>
+            <div class="rating">
+                <input type="radio" name="star" id="star1" value="5"><label for="star1">
+                </label>
+                <input type="radio" name="star" id="star2" value="4"><label for="star2">
+                </label>
+                <input type="radio" name="star" id="star3" value="3"><label for="star3">
+                </label>
+                <input type="radio" name="star" id="star4" value="2"><label for="star4">
+                </label>
+                <input type="radio" name="star" id="star5" value="1"><label for="star5">
+                </label>
+              </div>
+            
+        
+            <button class="buttonForm" type="submit">Confirmar </button>
+          </form>
+      </div>
+    
+<!-- footer -->
+  <footer>
+
+    <div class="dh"><img src="/images/logo-dh-blanco.png" alt="dh"></div>
+    
+    <div class="tmdb"><img src="/images/logotmdb.jpg" alt="tmdb"></div>
+
+    <article class="">
+      <strong style="color: rgb(203, 30, 64);">INTEGRANTES</strong>
+      <ul>
+        <li>Joaquín Gomez Rebelo</li>
+        <li>Eric Ryosho Shimizukawa</li>
+        <li>Candela Rocío Flores</li>
+      </ul>
+    </article>
+
+  </footer>
+</body>
+</html>

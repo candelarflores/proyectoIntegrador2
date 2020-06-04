@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/uikit.min.css">
-    <link rel="stylesheet" href="/stylesheets/reseñas.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <title>Nerfli</title>
+
+    <script src="/javascripts/login.js" ></script>
 </head>
 <body>
     <header>
@@ -35,45 +36,25 @@
             </ul>
         </nav>
     </header>
-    
     <div class="container">
-        <% if (reseñas.length == 0){ %>
-            <h1>No tenes reseñas</h1>
-            <%  } else { %>
-             <h1>Reseñas de <%= reseñas[0].Usuarios.username%></h1>
-             <br>
-            
-        
-        <% for (let i = 0; i < reseñas.length; i++ ){  %>   
-            
-          <div class='contenido'>
-            
-              <h5>Puntaje: <%= reseñas[i].rating %></h5>
-              <br>
-              <div class='review'> <%= reseñas[i].content %></div> 
-              <br>
-              <a class='botonEditar' style='text-decoration: none' href="/resenias/edit/<%=reseñas[i].id%>">Editar</a>
-              <a class='botonSerie' style='text-decoration: none' href="/detalles?serieId=<%= reseñas[i].movie_id %>">Ir a serie</a>
-              <a class='botonBorrar' style='text-decoration: none' href="/resenias/delete/<%=reseñas[i].id%>">Borrar</a>
-              <br>
-              <br>
-            
-            </div>
-                
-              
-              
-            
-        
-        
-            <% } %>
-            <% } %>
-    
-        
-      </div>
-      
-      <div style="height: 120px;"></div>
+        <h2>Eliminar reseña</h2>
+        <br>
+        <form action="/resenias/deleteR" method="POST">
+          <div class="form-group">
+            <input type="email" class="form-control" id="username" placeholder="Email" name="email">
+            <input type="hidden" name='idResenia' value="<%=id%>" >
 
-    <!-- footer -->
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" id="pwd" placeholder="Contraseña" name="pswd">
+          </div>
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+          
+          
+        </form>
+      </div>
+    
+<!-- footer -->
   <footer>
 
     <div class="dh"><img src="/images/logo-dh-blanco.png" alt="dh"></div>
