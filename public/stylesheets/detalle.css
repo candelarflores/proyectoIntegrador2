@@ -101,3 +101,26 @@ width: 50px;
   text-align: center;
   border-radius: 2%;
 }
+div.reseña {
+  color: aliceblue;
+  margin-left: 10%;
+}
+div.reseña div{
+  width: 5%;
+  float: left;
+  margin-right: 2%;
+  height: 150px;
+}
+div.reseña article{
+  width: 80%;
+}
+div.reseña ul{
+  list-style-type: none;
+}
+div.reseña ul li{
+  overflow: hidden;
+  margin-bottom: 2%;
+}
+
+
+
