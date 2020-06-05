@@ -4,6 +4,7 @@ header{
 
 div.container{
   text-align: center;
+  margin-bottom: 204px;
 }
 div.container .form-control{
   width: 50%;
