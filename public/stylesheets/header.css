@@ -48,3 +48,28 @@ header nav ul li a {
 header nav ul li a:hover{
 	color: black;
 }
+
+@media only screen and (max-width: 500px) {
+	/* For mobile phones: */
+	header nav ul li.logo img {
+		max-width: 100%;
+	}
+	header nav ul.logo-list{
+		width: 40%;
+		margin: 0%;
+		padding: 0%;
+	}
+	header nav ul.ul-menu{
+		width: 60%;
+		padding: 0%;
+	}
+	li.inicio, li.formBuscar, li.reseñas {
+		display: none;
+	}
+	header nav ul.ul-menu li.menu-item {
+		width: 30%;
+	}
+	header nav ul.ul-menu li.menu-item a{
+		font-size: 1em;
+	}
+  }

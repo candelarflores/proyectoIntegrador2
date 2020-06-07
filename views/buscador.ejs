@@ -23,28 +23,22 @@
 
   <header>
       <nav>
-          <ul class="logo-list">
-              <li class="logo"> <img src="/images/dh.png" alt=""> </li>
-          </ul>
-          <ul class="ul-menu">
-              <li class="menu-item home"><a class="color-violet" href="/">Inicio</a></li>
-              <li class="menu-item"><a class="color-violet" href="/generos">Géneros</a></li>
-              <li class="menu-item"><a class="color-violet" href="/buscar">Buscador</a></li>
-              <li class="menu-item search">
-                  <form class="" action="/buscar/resultados" method="GET">
-                      <input class="input-search" type="text" name="query" value="">
-                      <button class="btn-search" type="submit" name="button">Buscar</button>
-                  </form>
-              </li>
-
-
-              <li class="menu-item"><a class="color-violet" href="/registros">Regístrate</a></li>
-
-              <li class="menu-item"><a class="color-violet" href="/login">Mis reseñas</a></li>
-
-
-
-          </ul>
+        <ul class="logo-list">
+            <li class="logo"> <a href="/"><img src="/images/dh.png" alt=""></a></li>
+        </ul>
+        <ul class="ul-menu">
+            <li class="menu-item home inicio"><a class="color-violet" href="/">Inicio</a></li>
+            <li class="menu-item"><a class="color-violet" href="/generos">Géneros</a></li>
+            <li class="menu-item"><a class="color-violet" href='/buscar'>Buscador</a></li>
+            <li class="menu-item search formBuscar">
+                <form class="" action="resultadoBusqueda.ejs" method="GET">
+                    <input class="input-search" type="text" name="query" value="">
+                    <button class="btn-search" type="submit">Buscar</button>
+                </form>
+            </li>
+            <li class="menu-item"><a class="color-violet" href="/registros">Regístrate</a></li>
+            <li class="menu-item reseñas"><a class="color-violet" href="/login">Mis reseñas</a></li>
+        </ul>
       </nav>
   </header>
 
