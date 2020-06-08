@@ -5,4 +5,9 @@ header{
 div.container h3{
   font-size: 1.2em;
 }
+
+div.container {
+
+  margin-bottom: 200px;
+}
 }
