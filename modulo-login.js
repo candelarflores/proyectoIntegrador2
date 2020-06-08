@@ -1,5 +1,5 @@
 let db = require('./database/models')
-
+let bcrypt = require('bcryptjs')
 let moduloLogin = {
     chequearUsuario: function (email) {
         return db.Usuario.findOne({
@@ -27,10 +27,20 @@ let moduloLogin = {
         return db.Usuarios.findOne({
             where:{
                 email:email,
+                // pass: pass
             },
         })
         .then(results=>{
-            return results;
+            if (results != null) {
+                let chequeo = bcrypt.compareSync(pass, results.pass)
+                if (chequeo) {
+                    return results;
+                }else{
+                    return undefined
+                }
+            }else {
+                return undefined
+            }
         })
     }
 }
