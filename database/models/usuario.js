@@ -19,6 +19,9 @@ module.exports = (sequelize, DataTypes) => {
         dateofbirth: {
             type: DataTypes.DATE,
         },
+        favoriteGenre: {
+            type: DataTypes.STRING,
+        },
     };
     let config = {
         tableName: "usuarios",

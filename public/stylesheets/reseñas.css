@@ -38,6 +38,7 @@ header{
     border-style: solid;
     border-width: 3px;
     border-color: rgb(61, 61, 61);
+    margin-bottom: 20px;
     
   }
 
@@ -142,20 +143,34 @@ a.botonSerie:hover{
 }
 
 
-@media (max-widt: 600px) {
+@media only screen and (max-width: 500px)  {
 
 div.container {
-height: 800px;
+margin-bottom: 80px;
+
 
 }
 
 div.contenido {
-
-  
+ margin-bottom: 30PX;
+ width: 80%;
+ right: 20%;
 }
 
-footer {
-  margin-top: 1000px;
+a.botonEditar { 
+  
+
+}
+
+a.botonSerie {
+  margin-left: -9%;
+  
+
+}
+
+a.botonBorrar {
+  margin-left: 2%;
+  
 }
 
     

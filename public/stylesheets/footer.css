@@ -39,3 +39,27 @@ footer article ul{
     font-family: "Open Sans", sans-serif;
     font-size: 1em;
 }
+@media only screen and (max-width: 500px) {
+	/* For mobile phones: */
+	
+    footer div.dh, footer div.tmdb{
+        float: left;
+        width: 25%;
+        margin-left: 5%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+    footer article {
+        float: left;
+        width: 35%;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+    footer article ul {
+        font-size: 0.7em;
+    }
+    footer div.tmdb img{
+        width: 70%;
+        margin-left: 15%;
+    }
+}

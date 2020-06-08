@@ -15,9 +15,10 @@ module.exports = {
          email: req.body.email,
          pass: bcrypt.hashSync(req.body.pswd, 10),
          dateofbirth: req.body.birthdate,
-
+         favoriteGenre: req.body.favoriteGenre,
     }),
        res.redirect("/login"); 
+       //res.send(this.favoriteGenre)
     },
    
    }

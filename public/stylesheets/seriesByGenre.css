@@ -14,3 +14,12 @@ main .grilla-series div a{
   text-decoration: none;
 
 }
+@media only screen and (max-width: 500px) {
+  div a h3{
+    font-size: 1em;
+  }
+  main .grilla-series div{
+    width: 100%;
+  }
+
+}
