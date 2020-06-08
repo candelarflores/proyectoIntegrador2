@@ -140,3 +140,23 @@ a.botonSerie:hover{
 
 
 }
+
+
+@media (max-widt: 600px) {
+
+div.container {
+height: 800px;
+
+}
+
+div.contenido {
+
+  
+}
+
+footer {
+  margin-top: 1000px;
+}
+
+    
+}
